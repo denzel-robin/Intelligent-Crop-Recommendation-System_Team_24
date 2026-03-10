@@ -267,3 +267,46 @@ If we remove these from our data then it will,
 - Bias your ML model
 
 - Reduce accuracy
+
+### Phase 2
+
+#### Data Cleaning and Feature Engineering
+
+After our dataset analysis,
+Minhaj created R Scripts for data cleaning.
+After data cleaning Minhaj added more attributes
+to the dataset by smart feature engineering.
+
+The dataset after cleaning and feature engineering are
+stored in a preprocessing directory in data folder.
+
+#### Model Training
+
+After verifying the good dataset by the team,
+Ron splited the dataset for training and testing.
+The test data is taken by stratified clustering.
+
+Later Ron trained a XG-Boost model completely in R.
+
+#### Model Testing
+
+Adithya created the script for using testing data
+to test the trained model. After finding the model
+is satisfying, he created an interface in R to utilize
+the model
+
+### Phase 3
+
+#### Frontend
+
+Denzel created a frontend for the application using React and Javascript.
+Tailwind is used for styling the frontend.
+
+#### API creation
+
+After the frontend and backend is verfied as satisfactory
+by the team, Denzel converted the backend to an API,
+using plumber package in R.
+
+Using this API, Denzel combined backend and frontend
+creating the Intelligent-Crop-Recommendation-System.
