@@ -1,0 +1,97 @@
+========================================
+LOADING CLEANED DATASET
+========================================
+Dataset loaded successfully!
+Dimensions: 2207 rows x 8 columns
+
+Dataset Structure:
+'data.frame':   2207 obs. of  8 variables:
+ $ N          : int  90 85 60 74 78 69 69 94 89 69 ...
+ $ P          : int  42 58 55 35 42 37 55 53 54 50 ...
+ $ K          : int  43 41 44 40 42 42 38 40 38 42 ...
+ $ temperature: num  20.9 21.8 23 26.5 20.1 ...
+ $ humidity   : num  82 80.3 82.3 80.2 81.6 ...
+ $ ph         : num  6.5 7.04 7.84 6.98 7.63 ...
+ $ rainfall   : num  203 227 264 243 263 ...
+ $ label      : chr  "rice" "rice" "rice" "rice" ...
+
+========================================
+IDENTIFYING NUMERIC FEATURES
+========================================
+Numeric columns to scale: N, P, K, temperature, humidity, ph, rainfall 
+Non-numeric columns (excluded): label 
+
+========================================
+SUMMARY BEFORE MIN-MAX SCALING
+========================================
+Before Scaling:
+       Column       Min        Max     Mean      SD
+1           N  0.000000 140.000000  50.6507 36.9060
+2           P  5.000000 145.000000  53.3521 32.9340
+3           K  5.000000 205.000000  48.1246 50.5696
+4 temperature  8.825675  43.675493  25.6073  5.0594
+5    humidity 14.258040  99.981876  71.5131 22.2355
+6          ph  3.504752   9.935091   6.4688  0.7737
+7    rainfall 20.211267 298.560117 103.9043 55.4554
+
+========================================
+APPLYING MIN-MAX NORMALIZATION
+========================================
+  N               | Min:     0.0000  Max:   140.0000  | Scaled to [0, 1]
+  P               | Min:     5.0000  Max:   145.0000  | Scaled to [0, 1]
+  K               | Min:     5.0000  Max:   205.0000  | Scaled to [0, 1]
+  temperature     | Min:     8.8257  Max:    43.6755  | Scaled to [0, 1]
+  humidity        | Min:    14.2580  Max:    99.9819  | Scaled to [0, 1]
+  ph              | Min:     3.5048  Max:     9.9351  | Scaled to [0, 1]
+  rainfall        | Min:    20.2113  Max:   298.5601  | Scaled to [0, 1]
+
+Min-Max normalization applied successfully!
+
+========================================
+SUMMARY AFTER MIN-MAX SCALING
+========================================
+After Scaling:
+       Column Min Max   Mean     SD
+1           N   0   1 0.3618 0.2636
+2           P   0   1 0.3454 0.2352
+3           K   0   1 0.2156 0.2528
+4 temperature   0   1 0.4815 0.1452
+5    humidity   0   1 0.6679 0.2594
+6          ph   0   1 0.4609 0.1203
+7    rainfall   0   1 0.3007 0.1992
+
+========================================
+VERIFICATION
+========================================
+First 6 rows of scaled data:
+          N         P     K temperature  humidity        ph  rainfall label
+1 0.6428571 0.2642857 0.190   0.3458861 0.7902668 0.4662636 0.6564578  rice
+2 0.6071429 0.3785714 0.180   0.3714449 0.7706329 0.5494803 0.7416746  rice
+3 0.4285714 0.3571429 0.195   0.4068539 0.7939766 0.6742188 0.8757104  rice
+4 0.5285714 0.2142857 0.175   0.5069014 0.7687514 0.5405079 0.7999055  rice
+5 0.5571429 0.2642857 0.185   0.3243776 0.7856255 0.6412914 0.8712307  rice
+6 0.4928571 0.2285714 0.185   0.4083916 0.8062177 0.5549788 0.8293324  rice
+
+All scaled values in [0, 1]: TRUE 
+
+========================================
+SAVING SCALED DATASET
+========================================
+Scaled dataset saved to: dataset/Crop_recommendation_scaled.csv 
+Dimensions: 2207 rows x 8 columns
+
+========================================
+BEFORE vs AFTER COMPARISON
+========================================
+       Column Before_Min Before_Max Before_Mean After_Min After_Max After_Mean
+1           N   0.000000 140.000000     50.6507         0         1     0.3618
+2           P   5.000000 145.000000     53.3521         0         1     0.3454
+3           K   5.000000 205.000000     48.1246         0         1     0.2156
+4 temperature   8.825675  43.675493     25.6073         0         1     0.4815
+5    humidity  14.258040  99.981876     71.5131         0         1     0.6679
+6          ph   3.504752   9.935091      6.4688         0         1     0.4609
+7    rainfall  20.211267 298.560117    103.9043         0         1     0.3007
+
+========================================
+MIN-MAX SCALING COMPLETE
+========================================

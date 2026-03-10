@@ -1,0 +1,105 @@
+
+Rscript datasetClean.R 
+
+Output:
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+========================================
+LOADING DATASET
+========================================
+Dataset loaded successfully!
+Dimensions: 2714 rows x 8 columns
+
+First few rows of the dataset:
+   N  P  K temperature humidity       ph rainfall label
+1 90 42 43    20.87974 82.00274 6.502985 202.9355  rice
+2 85 58 41    21.77046 80.31964 7.038096 226.6555  rice
+3 60 55 44    23.00446 82.32076 7.840207 263.9642  rice
+4 74 35 40    26.49110 80.15836 6.980401 242.8640  rice
+5 78 42 42    20.13017 81.60487 7.628473 262.7173  rice
+6 69 37 42    23.05805 83.37012 7.073454 251.0550  rice
+
+Dataset structure:
+'data.frame':   2714 obs. of  8 variables:
+ $ N          : int  90 85 60 74 78 69 69 94 89 69 ...
+ $ P          : int  42 58 55 35 42 37 55 53 54 NA ...
+ $ K          : int  43 41 44 40 42 42 38 40 38 42 ...
+ $ temperature: num  20.9 21.8 23 26.5 20.1 ...
+ $ humidity   : num  82 80.3 82.3 80.2 81.6 ...
+ $ ph         : num  6.5 7.04 7.84 6.98 7.63 ...
+ $ rainfall   : num  203 227 264 243 263 ...
+ $ label      : chr  "rice" "rice" "rice" "rice" ...
+
+========================================
+MISSING VALUE ANALYSIS
+========================================
+Missing values per column:
+                 Column Missing_Count Missing_Percentage
+N                     N             0               0.00
+P                     P             7               0.26
+K                     K             0               0.00
+temperature temperature             0               0.00
+humidity       humidity             0               0.00
+ph                   ph             0               0.00
+rainfall       rainfall             0               0.00
+label             label             0               0.00
+
+Total missing values in dataset: 7 
+
+Handling missing values...
+  - Imputed P with median: 50 
+
+Missing values handled successfully!
+
+Remaining missing values: 0 
+
+========================================
+DUPLICATE ANALYSIS
+========================================
+Number of duplicate rows: 507 
+Percentage of duplicates: 18.68 %
+
+Removing duplicate rows...
+Duplicates removed: 507 
+Remaining rows: 2207 
+
+========================================
+PREPROCESSING SUMMARY
+========================================
+Original dataset dimensions: 2714 rows
+Final dataset dimensions: 2207 rows x 8 columns
+Rows removed: 507 
+
+Summary statistics of cleaned data:
+       N                P                K           temperature    
+ Min.   :  0.00   Min.   :  5.00   Min.   :  5.00   Min.   : 8.826  
+ 1st Qu.: 21.00   1st Qu.: 28.00   1st Qu.: 20.00   1st Qu.:22.754  
+ Median : 37.00   Median : 51.00   Median : 32.00   Median :25.567  
+ Mean   : 50.65   Mean   : 53.35   Mean   : 48.12   Mean   :25.607  
+ 3rd Qu.: 85.00   3rd Qu.: 68.00   3rd Qu.: 49.00   3rd Qu.:28.559  
+ Max.   :140.00   Max.   :145.00   Max.   :205.00   Max.   :43.675  
+    humidity           ph           rainfall         label          
+ Min.   :14.26   Min.   :3.505   Min.   : 20.21   Length:2207       
+ 1st Qu.:60.28   1st Qu.:5.972   1st Qu.: 64.58   Class :character  
+ Median :80.47   Median :6.425   Median : 95.12   Mode  :character  
+ Mean   :71.51   Mean   :6.469   Mean   :103.90                     
+ 3rd Qu.:89.93   3rd Qu.:6.924   3rd Qu.:124.80                     
+ Max.   :99.98   Max.   :9.935   Max.   :298.56                     
+
+========================================
+SAVING CLEANED DATASET
+========================================
+Cleaned dataset saved as: Crop_recommendation_cleaned.csv 
+
+========================================
+PREPROCESSING COMPLETE!
+========================================
