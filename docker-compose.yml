@@ -1,0 +1,16 @@
+services:
+
+  backend:
+    image: 2023bcs0189denzel/dwm_backend:latest
+    container_name: crop_backend
+    ports:
+      - "8000:8000"
+
+  frontend:
+    image: 2023bcs0189denzel/dwm_frontend:latest
+    container_name: crop_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
