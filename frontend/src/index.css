@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
 @keyframes fadeIn {
   from {
     opacity: 0;
