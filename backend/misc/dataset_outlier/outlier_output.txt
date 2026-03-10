@@ -1,0 +1,33 @@
+Summary BEFORE removing outliers:
+       N                P                K           temperature    
+ Min.   :  0.00   Min.   :  5.00   Min.   :  5.00   Min.   : 8.826  
+ 1st Qu.: 21.00   1st Qu.: 28.00   1st Qu.: 20.00   1st Qu.:22.754  
+ Median : 37.00   Median : 51.00   Median : 32.00   Median :25.567  
+ Mean   : 50.65   Mean   : 53.35   Mean   : 48.12   Mean   :25.607  
+ 3rd Qu.: 85.00   3rd Qu.: 68.00   3rd Qu.: 49.00   3rd Qu.:28.559  
+ Max.   :140.00   Max.   :145.00   Max.   :205.00   Max.   :43.675  
+    humidity           ph           rainfall         label          
+ Min.   :14.26   Min.   :3.505   Min.   : 20.21   Length:2207       
+ 1st Qu.:60.28   1st Qu.:5.972   1st Qu.: 64.58   Class :character  
+ Median :80.47   Median :6.425   Median : 95.12   Mode  :character  
+ Mean   :71.51   Mean   :6.469   Mean   :103.90                     
+ 3rd Qu.:89.93   3rd Qu.:6.924   3rd Qu.:124.80                     
+ Max.   :99.98   Max.   :9.935   Max.   :298.56                     
+
+Summary AFTER removing outliers:
+       N                P               K          temperature   
+ Min.   :  0.00   Min.   : 5.00   Min.   : 5.00   Min.   :14.34  
+ 1st Qu.: 22.00   1st Qu.:25.00   1st Qu.:19.00   1st Qu.:23.42  
+ Median : 40.00   Median :45.00   Median :26.00   Median :25.95  
+ Mean   : 54.37   Mean   :44.79   Mean   :31.68   Mean   :25.84  
+ 3rd Qu.: 90.00   3rd Qu.:63.00   3rd Qu.:44.00   3rd Qu.:28.57  
+ Max.   :140.00   Max.   :95.00   Max.   :85.00   Max.   :37.13  
+    humidity           ph           rainfall         label          
+ Min.   :15.82   Min.   :4.546   Min.   : 20.21   Length:1771       
+ 1st Qu.:58.48   1st Qu.:6.026   1st Qu.: 59.48   Class :character  
+ Median :76.86   Median :6.464   Median : 93.79   Mode  :character  
+ Mean   :70.22   Mean   :6.481   Mean   : 98.34                     
+ 3rd Qu.:88.20   3rd Qu.:6.932   3rd Qu.:122.56                     
+ Max.   :99.98   Max.   :8.340   Max.   :214.41                     
+
+Outliers removed successfully. Cleaned file saved.
