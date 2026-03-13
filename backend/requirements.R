@@ -8,7 +8,8 @@ required_packages <- c(
   "caret",
   "xgboost",
   "ggplot2",
-  "lattice"
+  "lattice",
+  "plumber"
 )
 
 install_if_missing <- function(pkg) {

@@ -31,13 +31,13 @@ const itemVariants = {
 export default function App() {
   // IMPORTANT: store values as STRINGS
   const [form, setForm] = useState({
-    N: "50",
-    P: "40",
-    K: "40",
-    temperature: "25",
-    humidity: "70",
-    ph: "6.5",
-    rainfall: "120",
+    N: "60",
+    P: "55",
+    K: "45",
+    temperature: "21.4",
+    humidity: "83.33",
+    ph: "5.9",
+    rainfall: "287.576",
   });
 
   const [result, setResult] = useState([]);

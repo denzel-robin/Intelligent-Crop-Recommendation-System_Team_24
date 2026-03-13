@@ -5,8 +5,6 @@ RUN R -e "install.packages(c('xgboost','data.table','jsonlite'), repos='https://
 WORKDIR /app
 
 COPY api api
-COPY model model
-COPY data data
 
 EXPOSE 8000
 
