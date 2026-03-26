@@ -14,14 +14,26 @@ params <- list(
   subsample    = 0.8,
   colsample_bytree = 0.8
 )
+watchlist <- list(train = dtrain, test = dtest)
+
 model <- xgb.train(
-  params                = params,
-  data                  = dtrain,
-  nrounds               = 200,
-  evals                 = list(test = dtest),
+  params = params,
+  data = dtrain,
+  nrounds = 2000,
+  evals = watchlist,
   early_stopping_rounds = 50,
-  verbose               = 1
+  verbose = 1
 )
+
+log <- model$evaluation_log
+
+print(ggplot(log, aes(x = iter)) +
+        geom_line(aes(y = train_merror), linetype = "dashed") +
+        geom_line(aes(y = test_merror)) +
+        labs(title = "Training vs Test Error",
+             x = "Iterations",
+             y = "Error") +
+        theme_minimal())
 
 # ✅ Fixed accuracy measurement for softprob
 pred_raw    <- predict(model, dtest)
