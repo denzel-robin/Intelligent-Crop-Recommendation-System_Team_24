@@ -2,6 +2,8 @@
 <!-- markdownlint-disable MD060 -->
 # Intelligent-Crop-Recommendation-System
 
+[Githb](https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System_Team_24.git)
+
 ## Team Members
 
 |Name                | Roll Number|
