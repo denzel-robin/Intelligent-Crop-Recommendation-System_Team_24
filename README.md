@@ -178,11 +178,11 @@ Application
 ### Use the model with frontend(GUI)
 
 ``` bash
-git clone https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System.git
+git clone https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System_Team_24.git
 ```
 
 ``` bash
-cd Intelligent-Crop-Recommendation-System
+cd Intelligent-Crop-Recommendation-System_Team_24/
 ```
 
 Docker compose must be installed on your system to run it.  
@@ -203,11 +203,11 @@ docker compose down
 ### Use the model in CLI
 
 ``` bash
-git clone https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System.git
+git clone https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System_Team_24.git
 ```
 
 ``` bash
-cd Intelligent-Crop-Recommendation-System/backend
+cd Intelligent-Crop-Recommendation-System_Team_24/backend
 ```
 
 Open R terminal
