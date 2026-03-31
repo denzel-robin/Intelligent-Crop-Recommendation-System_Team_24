@@ -123,16 +123,16 @@ We used multiple evaluation techniques:
 - Quick response from ML model
 - Helps farmers make smart cultivation decisions
 
-Testing results
+Testing results  
 ![Testing Metric](results/testing.png)
 
-Confusion Matrix
+Confusion Matrix  
 ![Confusion Matrix](results/Confusion_Metrix.png)
 
-Training vs Validation Graph
+Training vs Validation Graph  
 ![Training vs Validation Graph](results/training_validation_graph.png)
 
-Application
+Application  
 ![Application](results/Interface.png)
 
 ## Key Visualizations
