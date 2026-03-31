@@ -42,22 +42,22 @@ conditions.
 
 ## Dataset
 
-**Source:** [kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
-**number of observations:** 2200
-**number of variables:** 7
+**Source:** [kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)  
+**number of observations:** 2200  
+**number of variables:** 7  
 
 ### Dataset Attributes
 
 The dataset contains soil nutrients and environmental factors used to recommend suitable crops.
 
-**Nitrogen (N):** Measures nitrogen content in soil, essential for plant growth and leaf development.
-**Phosphorus (P):** Indicates phosphorus level, important for root growth and energy transfer in plants.
-**Potassium (K):** Represents potassium content, which improves plant health and disease resistance.
-**Temperature:** Average environmental temperature (°C) affecting crop suitability.
-**Humidity:** Amount of moisture in the air, influencing crop growth conditions.
-**pH:** Soil acidity/alkalinity level, critical for nutrient availability.
-**Rainfall:** Amount of rainfall (mm), affecting water availability for crops.
-**Label:** Target variable representing the recommended crop type.
+**Nitrogen (N):** Measures nitrogen content in soil, essential for plant growth and leaf development.  
+**Phosphorus (P):** Indicates phosphorus level, important for root growth and energy transfer in plants.  
+**Potassium (K):** Represents potassium content, which improves plant health and disease resistance.  
+**Temperature:** Average environmental temperature (°C) affecting crop suitability.  
+**Humidity:** Amount of moisture in the air, influencing crop growth conditions.  
+**pH:** Soil acidity/alkalinity level, critical for nutrient availability.  
+**Rainfall:** Amount of rainfall (mm), affecting water availability for crops.  
+**Label:** Target variable representing the recommended crop type.  
 
 ## Methodology
 
@@ -129,7 +129,7 @@ We used multiple evaluation techniques:
 
 ![Training vs Validation Graph](results/training_validation_graph.png)
 
-![Application](results/interface.png)
+![Application](results/Interface.png)
 
 ## Key Visualizations
 
@@ -171,8 +171,57 @@ We used multiple evaluation techniques:
 
 ## How to run the project
 
+### Use the model with frontend(GUI)
+
 ``` bash
-git pull https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System.git
+git clone https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System.git
+```
+
+``` bash
+cd Intelligent-Crop-Recommendation-System
+```
+
+Docker compose must be installed on your system to run it.  
+Give root permission to docker if needed.
+
+``` bash
+docker compose up
+```
+
+Open a browser and go to localhost:3000  
+Ensure the port 3000 is free  
+Turn off the compose after usage
+
+``` bash
+docker compose down
+```
+
+### Use the model in CLI
+
+``` bash
+git clone https://github.com/denzel-robin/Intelligent-Crop-Recommendation-System.git
+```
+
+``` bash
+cd Intelligent-Crop-Recommendation-System/backend
+```
+
+Open R terminal
+
+```bash
+R
+```
+
+Download the requirements
+
+``` R
+source("requirements.R")
+```
+
+Run the CLI version of the app
+
+``` R
+source("scripts/06_recommendation_interface.R")
 ```
 
 ## Conclusions
@@ -186,6 +235,16 @@ better decisions and improve agricultural productivity.
 
 ## Contribtions
 
+|Name                | Contributions                             |
+|--------------------|-------------------------------------------|
+|Denzel Robin        | API Creation, Frontend, Report Writing    |
+|Ron Stephen Mathew  | XGBoost model creation                    |
+|Adithya T J         | Data Preprocessing, hyperparameter tuning |
+|Muhammed Minhaj P S | EDA, Visualizations                       |
+
 ## References
 
-Dataset Source: [kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
+Dataset Source: [kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)  
+XGBoost paper: [XGBoost](https://arxiv.org/abs/1603.02754)  
+R documentation: [R](https://www.rdocumentation.org/)  
+Using XGBoost: [XGBoost_in_R](https://www.statology.org/xgboost-in-r)
